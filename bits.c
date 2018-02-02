@@ -333,7 +333,7 @@ int isNonZero(int x) {
 unsigned float_abs(unsigned uf) {
   unsigned signMask = 0x7FFFFFFF;//Create mask for sign bit		
   unsigned NaN = 0x7F800001;//Used for comparison later
-  unsigned abs = mask & uf;//Make positive
+  unsigned abs = signMask & uf;//Make positive
  
   if (abs >= NaN)//Check if abs value is NaN, return uf
   {
